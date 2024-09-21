@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+<title>MYAPP</title>
+<link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    <h2>SIGN IN</h2>
+
+    <form method="post">
+    {% csrf_token %}
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username" required />
+    </div>
+    <br>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" required />
+    </div>
+    <br>
+    <div></div>
+            <label for="repeatpassword">Repeat Password:</label>
+            <input type="password" name="repeat password" id="repeatpassword" required>
+        </div>
+
+        <br>
+        <button type="submit">Sign In</button>   
+ </form>
+  </body>
+</html>
